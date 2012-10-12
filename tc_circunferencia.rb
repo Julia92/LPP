@@ -18,6 +18,9 @@ class TestCircunferencia < Test::Unit::TestCase
 	[Circunferencia.new().calculo(-25)].any? { |num| num > 0.0}
 	end
    end
-
+   
+   def test_simple4
+      assert_in_delta(Circunferencia.new().calculo(25), 3.9788735772973833, 0.00000001)
+   end
 
 end

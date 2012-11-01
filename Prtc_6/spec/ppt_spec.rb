@@ -39,6 +39,9 @@ require 'ppt'
              @ppt_obj.resultado.should == :gane
           end
 
+          it "Se debe invocar al metodo jugar() para determinar el ganador de la tirada" do
+             @ppt_obj.jugar.should == @ppt_obj.resultado
+          end
 
 
 

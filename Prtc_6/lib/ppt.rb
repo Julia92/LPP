@@ -19,5 +19,17 @@ class PiedraPapelTijera
    def obtener_maquina
      @maquina = @tiradas.sample
    end
+
+   def jugar
+   obtener_maquina
+   if(@maquina == @humano)
+     @resultado = @resultados[2]
+   elsif(@humano == @resultados[@maquina])
+     @resultado = @resultados[1]
+   else
+     @resultado = @resultados[0]
 end
+end
+end
+
 

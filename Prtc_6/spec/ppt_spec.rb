@@ -31,7 +31,9 @@ require 'ppt'
              @ppt_obj.obtener_maquina.should==@ppt_obj.maquina
           end
 
-
+          it "Debe existir una lista de resultados de un juego desde el punto de vista de la maquina" do
+              @ppt_obj.resultados.should == [:gane, :perdi, :empate]
+          end
 
 
 

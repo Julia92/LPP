@@ -6,5 +6,9 @@ require 'ppt'
      before :each do
               @ppt_obj= PiedraPapelTijera.new
      end
+    
+          it "Debe existir una tirada para el humano" do
+             @humano.initialize.should == 0
+          end
 end
     

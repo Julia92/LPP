@@ -4,20 +4,19 @@ require 'ppt'
 
      describe PiedraPapelTijera do
      before :each do
-              @ppt_obj= PiedraPapelTijera.new(humano)
+              @ppt_obj= PiedraPapelTijera.new
      end
     
           it "Debe existir una tirada para el humano" do
-             @humano.initialize.should == humano.to_sym
+             @ppt_obj.humano.should == 0
           end
           
 	  it "Debe existir una tirada para la maquina" do
-	     @maquina.initialize.should == @tiradas.sample
-	     @maquina.initialize.should == 0
+	     @ppt_obj.maquina.should == 0
           end
-		
+
 	  it "Debe existir una lista de tiradas validas" do
-	     @tiradas = [ :piedra, :papel, :tijeras]
+	     @ppt_obj.tiradas.should == [ :piedra, :papel, :tijeras]
 	  end
 end
     

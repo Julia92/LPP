@@ -10,5 +10,10 @@ require 'ppt'
           it "Debe existir una tirada para el humano" do
              @humano.initialize.should == 0
           end
+          
+	  it "Debe existir una tirada para la maquina" do
+	     @maquina.initialize.should == 0
+          end
+
 end
     

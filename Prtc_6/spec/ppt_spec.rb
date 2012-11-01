@@ -18,5 +18,10 @@ require 'ppt'
 	  it "Debe existir una lista de tiradas validas" do
 	     @ppt_obj.tiradas.should == [ :piedra, :papel, :tijeras]
 	  end
+
+          it "Debe existir una lista de jugadas posibles y quien gana" do
+             @ppt_obj.ganadoras.should=={:piedra=>:tijeras , :papel=>:piedra, :tijeras=>:papel}
+          end
+
 end
     

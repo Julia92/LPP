@@ -20,7 +20,7 @@ require 'ppt'
 	  end
 
           it "Debe existir una lista de jugadas posibles y quien gana" do
-             @ppt_obj.ganadoras.should=={:piedra=>:tijeras , :papel=>:piedra, :tijeras=>:papel}
+             @ppt_obj.ganadoras.should == {:piedra=>:tijeras , :papel=>:piedra, :tijeras=>:papel}
           end
 
           it "Se debe invocar al metodo obtener_humano() para recoger la tirada del humano y que esta sea valida" do
@@ -28,13 +28,16 @@ require 'ppt'
           end
 
           it "Se debe invocar al metodo obtener_maquina() para recoger la tirada de la maquina y que esta sea valida" do
-             @ppt_obj.obtener_maquina.should==@ppt_obj.maquina
+             @ppt_obj.obtener_maquina.should == @ppt_obj.maquina
           end
 
           it "Debe existir una lista de resultados de un juego desde el punto de vista de la maquina" do
               @ppt_obj.resultados.should == [:gane, :perdi, :empate]
           end
 
+          it "Debe existir un resultado para un juego, desde el punto de vista de lamaquina" do
+             @ppt_obj.resultado.should == :gane
+          end
 
 
 

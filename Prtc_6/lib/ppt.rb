@@ -1,7 +1,7 @@
 #! /usr/local/ruby/bin/ruby
 
 class PiedraPapelTijera
-   attr_accessor :humano, :maquina, :tiradas, :ganadoras, :resultados
+   attr_accessor :humano, :maquina, :tiradas, :ganadoras, :resultados, :resultado
 
     def initialize  
       @humano = :tijeras
@@ -9,6 +9,7 @@ class PiedraPapelTijera
       @tiradas = [ :piedra, :papel, :tijeras]
       @ganadoras = {:piedra=>:tijeras , :papel=>:piedra, :tijeras=>:papel}
       @resultados = [:gane, :perdi, :empate]
+      @resultado = :gane
 
     end
 

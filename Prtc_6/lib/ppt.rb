@@ -22,9 +22,9 @@ class PiedraPapelTijera
 
    def jugar
    obtener_maquina
-   if(@maquina == @humano)
+   if @maquina == @humano
      @resultado = @resultados[2]
-   elsif(@humano == @resultados[@maquina])
+   elsif @humano == @ganadoras[@maquina]
      @resultado = @resultados[1]
    else
      @resultado = @resultados[0]

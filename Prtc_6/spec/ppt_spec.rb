@@ -44,19 +44,19 @@ require 'ppt'
           end
 	 
  	  it "Se debe de comprobar que las tiradas de la maquina al ser aleatorias recorren las tres posibilidades" do
-             vector=[]
+             almacen=[]
              30.times do
-                vector.push@ppt_obj.obtener_maquina
+                almacen.push@ppt_obj.obtener_maquina
               end
-             vector.uniq.length.should == @ppt_obj.tiradas.length
+             almacen.uniq.length.should == @ppt_obj.tiradas.length
           end  
 
           it "Se debe comprobar que las tiradas de la maquina y del humano no son siempre la misma" do
-             vector=[]
+             almacen=[]
              30.times do
-                vector.push@ppt_obj.jugar
+                almacen.push@ppt_obj.jugar
               end
-	     vector.uniq.length.should == @ppt_obj.resultados.length
+	     almacen.uniq.length.should == @ppt_obj.resultados.length
          end
 end
     

@@ -1,0 +1,6 @@
+source "http://rubygems.org"
+
+# Specify your gem's dependencies in ull-etsii-alu4237-quiz.gemspec
+gemspec
+gem 'rake'
+gem 'rspec'

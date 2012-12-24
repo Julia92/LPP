@@ -1,0 +1,7 @@
+source "http://rubygems.org"
+
+# Specify your gem's dependencies in alu4237-tateti-azul.gemspec
+gemspec
+
+gem 'rake'
+gem 'rspec'

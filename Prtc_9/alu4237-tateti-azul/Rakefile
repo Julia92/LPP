@@ -1,0 +1,29 @@
+require "bundler/gem_tasks"
+require "rake/clean"
+CLEAN.include('*.swp')
+CLOBBER.include('pkg/*.gem')
+task :test do
+  sh "ruby -Ilib test/tc_tateti.rb"
+end
+
+desc "Run rspec for tateti"
+task :spec do
+sh "rspec -Ilib spec/spec_fracciones.rb --format documentation"
+end
+
+desc "desistalar geme"
+task :unistall do
+sh "gem uninstall alu4237-tateti-azul"
+end
+
+desc "Hide gem tictactoe"
+task :unpublish, :version do |t,args|
+sh "gem yank alu4237-tateti-azul -v #{args[:version]}"
+end
+
+desc " Show all published versions of gem"
+task :published do
+sh "gem list alu4237-tateti-azul --remote --all"
+end
+
+
